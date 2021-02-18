@@ -1,5 +1,10 @@
 package cuentas;
 
+/**
+ * Clase que sirve para el manejo de una cuenta
+ * @author Tomás Manuel Pedrero Vidal <wirotp@hotmail.com>
+ * @version 1.0
+ */
 public class CCuenta {
 
     /**
@@ -86,11 +91,20 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     * 
+     * @return el saldo de la cuenta llamado al método getSaldo()
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+    /**
+     * Método que sirve para ingresar una cantidad de dinero en una cuenta
+     * @param cantidad - cantidad que queremos ingresar
+     * @throws Exception - lanza una excepción si la cantidad es negativa
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -98,6 +112,12 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     * Método que sirve para retirar una cantidad de dinero de una cuenta
+     * @param cantidad - cantidad que queremos retirar
+     * @throws Exception - - lanza una excepción si la cantidad es negativa o es 
+     * más dinero del que tienes la cuenta
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
