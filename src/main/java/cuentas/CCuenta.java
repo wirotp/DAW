@@ -3,56 +3,56 @@ package cuentas;
 public class CCuenta {
 
     /**
-     * @return the nombre
+     * @return nombre - devuelve el nombre del titular de la cuenta
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * @param nombre the nombre to set
+     * @param nombre - nombre que queremos guardar
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
-     * @return the cuenta
+     * @return cuenta - devuelve el numero de cuenta
      */
     public String getCuenta() {
         return cuenta;
     }
 
     /**
-     * @param cuenta the cuenta to set
+     * @param cuenta - cuenta que queremos guardar
      */
     public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
 
     /**
-     * @return the saldo
+     * @return saldo - devuelve el saldo que tiene la cuenta
      */
     public double getSaldo() {
         return saldo;
     }
 
     /**
-     * @param saldo the saldo to set
+     * @param saldo - saldo que queremos guardar
      */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
     /**
-     * @return the tipoInterés
+     * @return tipoInterés - devuelve el tipo de interes de la cuenta
      */
     public double getTipoInterés() {
         return tipoInterés;
     }
 
     /**
-     * @param tipoInterés the tipoInterés to set
+     * @param tipoInterés - tipoInterés que queremos guardar
      */
     public void setTipoInterés(double tipoInterés) {
         this.tipoInterés = tipoInterés;
@@ -63,11 +63,22 @@ public class CCuenta {
     private String cuenta;
     private double saldo;
     private double tipoInterés;
+    
+    /**
+     * Constructor por defecto
+     */
 
     public CCuenta()
     {
     }
 
+    /**
+     * Constructor por parámetros
+     * @param nom nombre con el que queremos inicializar
+     * @param cue cuenta con la que queremos inicializar
+     * @param sal saldo con el que queremos inicializar
+     * @param tipo tipo de interes con el que queremos inicializar
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
